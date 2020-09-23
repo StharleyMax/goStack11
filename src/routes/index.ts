@@ -1,10 +1,11 @@
 import { Router } from 'express';
 
 import appointmentsRouter from './appointments.routes';
+import usersRouter from './users.routes';
 
 const routes = Router();
 
 routes.use('/appointment', appointmentsRouter);
-routes.get('/', (req, res) => res.json({ message: 'GO STACK 11' }));
+routes.use('/users', usersRouter);
 
 export default routes;
